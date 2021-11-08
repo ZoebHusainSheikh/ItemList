@@ -19,9 +19,6 @@ final class NetworkHttpClient: NSObject {
     typealias failureBlock = (_ response: Error?) -> Void
     
     static let sharedInstance = NetworkHttpClient()
-}
-
-private extension NetworkHttpClient {
     
     func performAPICall(_ strURL : String?, method: String? = Constants.getMethod, parameters : Dictionary<String, Any>? = nil, success:@escaping successBlock, failure:@escaping failureBlock){
         if let urlPath:String = strURL {
@@ -49,6 +46,9 @@ private extension NetworkHttpClient {
             task.resume()
         }
     }
+}
+
+private extension NetworkHttpClient {
     
     func parseResponse(success: successBlock, failure: failureBlock, data: Data?, response: URLResponse?, error: Error?) {
         guard let dataResponse = data,
@@ -58,11 +58,6 @@ private extension NetworkHttpClient {
             AlertViewController.sharedInstance.alertWindow(message: error?.localizedDescription ?? AlertViewController.kSomethingWentWrongMessage)
             return
         }
-        
-        // Kept for debugging purpose
-        //        if let parsedData = try? JSONSerialization.jsonObject(with: dataResponse) as? [String:Any] {
-        //            debugPrint("Response: " + parsedData.debugDescription)
-        //        }
         
         success(dataResponse)
     }

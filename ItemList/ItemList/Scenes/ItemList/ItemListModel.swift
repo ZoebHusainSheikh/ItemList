@@ -24,7 +24,7 @@ enum ItemList
         }
         struct ViewModel
         {
-            var itemsInfo: ItemsResponse?
+            var items: [Item]?
         }
     }
 }
@@ -70,10 +70,21 @@ extension Item {
         
         return url
     }
+    
     var imageThumbnailURL: URL? {
         guard let urlString = imageURLsThumbnails?.first, let url = URL(string: urlString) else { return nil }
         
         return url
+    }
+    
+    var imageID: String? {
+        guard let id = imageIDs?.first else { return nil }
+        return id
+    }
+    
+    var imageThumbID: String? {
+        guard let id = imageID else { return nil }
+        return id + "_thumb" // Add "_thumb" to make it different for normal image and thumb image
     }
     
     var colors: (UIColor, UIColor)? {

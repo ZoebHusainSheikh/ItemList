@@ -26,3 +26,71 @@ extension UIColor {
         )
     }
 }
+
+extension UIView {
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            clipsToBounds = true
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
+    }
+    
+    @IBInspectable var borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor? {
+        get {
+            return UIColor(cgColor: layer.borderColor!)
+        }
+        set {
+            layer.borderColor = newValue?.cgColor
+        }
+    }
+    
+    func bounce(duration: Double = 2.0) {
+        self.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        UIView.animate(withDuration: duration,
+                       delay: 0,
+                       usingSpringWithDamping: 0.3,
+                       initialSpringVelocity: 0.1,
+                       options: .beginFromCurrentState,
+                       animations: {
+                        self.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }, completion: nil)
+        
+        
+    }
+    static var className: String {
+        return "\(self)"
+    }
+}
+
+extension UIViewController {
+    
+    static var className: String {
+        return "\(self)"
+    }
+}
+
+extension String {
+    
+    static var empty: String {
+        return ""
+    }
+    
+    var trim: String {
+        return self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+}

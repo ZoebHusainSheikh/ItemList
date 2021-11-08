@@ -25,6 +25,8 @@
 		72250AB32739418100E30911 /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72250AB22739418100E30911 /* CommonExtensions.swift */; };
 		72250ABC2739441F00E30911 /* NetworkHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72250ABB2739441F00E30911 /* NetworkHttpClient.swift */; };
 		72250AC1273944AC00E30911 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72250AC0273944AC00E30911 /* AlertViewController.swift */; };
+		72250AC62739493E00E30911 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72250AC52739493E00E30911 /* ItemDetailsViewController.swift */; };
+		72250ACB27394F5500E30911 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72250ACA27394F5500E30911 /* CacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		72250AB22739418100E30911 /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		72250ABB2739441F00E30911 /* NetworkHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHttpClient.swift; sourceTree = "<group>"; };
 		72250AC0273944AC00E30911 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		72250AC52739493E00E30911 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
+		72250ACA27394F5500E30911 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 		72250A8B2739322D00E30911 /* ItemDetails */ = {
 			isa = PBXGroup;
 			children = (
+				72250AC52739493E00E30911 /* ItemDetailsViewController.swift */,
 			);
 			path = ItemDetails;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			children = (
 				72250AB22739418100E30911 /* CommonExtensions.swift */,
 				72250AC0273944AC00E30911 /* AlertViewController.swift */,
+				72250ACA27394F5500E30911 /* CacheManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -337,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72250A582739318100E30911 /* ViewController.swift in Sources */,
+				72250ACB27394F5500E30911 /* CacheManager.swift in Sources */,
 				72250AB32739418100E30911 /* CommonExtensions.swift in Sources */,
 				72250A542739318100E30911 /* AppDelegate.swift in Sources */,
 				72250ABC2739441F00E30911 /* NetworkHttpClient.swift in Sources */,
@@ -348,6 +355,7 @@
 				72250A9D2739334600E30911 /* ItemListPresenter.swift in Sources */,
 				72250AAD2739339F00E30911 /* ItemListWorker.swift in Sources */,
 				72250AC1273944AC00E30911 /* AlertViewController.swift in Sources */,
+				72250AC62739493E00E30911 /* ItemDetailsViewController.swift in Sources */,
 				72250A562739318100E30911 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
