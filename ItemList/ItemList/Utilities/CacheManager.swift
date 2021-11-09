@@ -46,6 +46,9 @@ extension UIImageView {
                 guard let weakSelf = self, let image = image else { return }
                 DispatchQueue.main.async {
                     weakSelf.image = image
+                    if isAnimated {
+                        weakSelf.bounce(after: .now() + 1.0)
+                    }
                 }
                 CacheManager.shared.cache.setObject(image, forKey: itemNumber)
             }

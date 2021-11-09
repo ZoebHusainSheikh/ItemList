@@ -24,10 +24,12 @@ class ItemListViewController: UIViewController {
         static let rowHeight: CGFloat = 65
         static let baseURL = "https://ey3f2y0nre.execute-api.us-east-1.amazonaws.com/default/dynamodb-writer"
     }
-    private var items = [Item]()
+    var items = [Item]()
     private lazy var cellSize = (self.view.frame.width - 30) / 2
     var interactor: ItemListBusinessLogic?
     var router: (NSObjectProtocol & ItemListRoutingLogic & ItemListDataPassing)?
+    
+    // MARK: View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
