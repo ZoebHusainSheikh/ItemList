@@ -27,6 +27,8 @@
 		72250AC1273944AC00E30911 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72250AC0273944AC00E30911 /* AlertViewController.swift */; };
 		72250AC62739493E00E30911 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72250AC52739493E00E30911 /* ItemDetailsViewController.swift */; };
 		72250ACB27394F5500E30911 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72250ACA27394F5500E30911 /* CacheManager.swift */; };
+		72250AD02739AB5000E30911 /* ItemDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72250ACF2739AB4F00E30911 /* ItemDetailsInteractor.swift */; };
+		72250AD52739AB6400E30911 /* ItemDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72250AD42739AB6400E30911 /* ItemDetailsRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		72250AC0273944AC00E30911 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		72250AC52739493E00E30911 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
 		72250ACA27394F5500E30911 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		72250ACF2739AB4F00E30911 /* ItemDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsInteractor.swift; sourceTree = "<group>"; };
+		72250AD42739AB6400E30911 /* ItemDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,8 @@
 		72250A8B2739322D00E30911 /* ItemDetails */ = {
 			isa = PBXGroup;
 			children = (
+				72250ACF2739AB4F00E30911 /* ItemDetailsInteractor.swift */,
+				72250AD42739AB6400E30911 /* ItemDetailsRouter.swift */,
 				72250AC52739493E00E30911 /* ItemDetailsViewController.swift */,
 			);
 			path = ItemDetails;
@@ -345,9 +351,11 @@
 				72250A582739318100E30911 /* ViewController.swift in Sources */,
 				72250ACB27394F5500E30911 /* CacheManager.swift in Sources */,
 				72250AB32739418100E30911 /* CommonExtensions.swift in Sources */,
+				72250AD52739AB6400E30911 /* ItemDetailsRouter.swift in Sources */,
 				72250A542739318100E30911 /* AppDelegate.swift in Sources */,
 				72250ABC2739441F00E30911 /* NetworkHttpClient.swift in Sources */,
 				72250AA82739338200E30911 /* ItemListViewController.swift in Sources */,
+				72250AD02739AB5000E30911 /* ItemDetailsInteractor.swift in Sources */,
 				72250A8E273932D700E30911 /* ItemListCollectionViewCell.swift in Sources */,
 				72250AA32739336300E30911 /* ItemListRouter.swift in Sources */,
 				72250A932739331100E30911 /* ItemListInteractor.swift in Sources */,
