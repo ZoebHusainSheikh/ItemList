@@ -30,11 +30,14 @@ extension UIImageView {
     }
     
     // MARK: - Set Image in Cache
-    func setImage(url: URL, itemNumber: NSString ) {
+    func setImage(url: URL, itemNumber: NSString, isAnimated: Bool = false) {
         if let cachedImage = CacheManager.shared.cache.object(forKey: itemNumber) {
             debugPrint("Using a cached image for item: \(itemNumber)")
             DispatchQueue.main.async {
                 self.image = cachedImage
+                if isAnimated {
+                    self.bounce(after: .now() + 1.0)
+                }
             }
         } else {
             let totalAttempt: Int = CacheManager.shared.attempts(for: itemNumber)

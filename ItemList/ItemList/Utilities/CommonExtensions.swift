@@ -58,16 +58,18 @@ extension UIView {
         }
     }
     
-    func bounce(duration: Double = 2.0) {
-        self.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-        UIView.animate(withDuration: duration,
-                       delay: 0,
-                       usingSpringWithDamping: 0.3,
-                       initialSpringVelocity: 0.1,
-                       options: .beginFromCurrentState,
-                       animations: {
-                        self.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-        }, completion: nil)
+    func bounce(duration: Double = 2.0, after: DispatchTime = .now() + 0.0) {
+        DispatchQueue.main.asyncAfter(deadline: after) {
+            self.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            UIView.animate(withDuration: duration,
+                           delay: 0,
+                           usingSpringWithDamping: 0.3,
+                           initialSpringVelocity: 0.1,
+                           options: .beginFromCurrentState,
+                           animations: {
+                            self.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            }, completion: nil)
+        }
         
         
     }

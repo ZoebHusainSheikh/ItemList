@@ -23,6 +23,11 @@ class ItemListCollectionViewCell: UICollectionViewCell {
         itemImageView.cornerRadius = imageSize / 2
         itemImageViewWidthLC.constant = imageSize
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.itemImageView.image = nil
+    }
 }
 
 extension ItemListCollectionViewCell {

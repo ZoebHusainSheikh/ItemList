@@ -170,7 +170,7 @@ private extension ItemDetailsViewController {
         uidLabel.attributedText = NSMutableAttributedString().bold("UID: ").normal(item.uid ?? String.empty)
         
         if let imageURL = item.imageURL, let itemNumber = self.item?.imageID {
-            self.itemImageView.setImage(url: imageURL, itemNumber: itemNumber as NSString)
+            self.itemImageView.setImage(url: imageURL, itemNumber: itemNumber as NSString, isAnimated: true)
         }
     }
 }
